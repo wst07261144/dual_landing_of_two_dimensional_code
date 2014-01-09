@@ -1,0 +1,19 @@
+#wrapper.wrapper.back-img
+  %br
+  %div(style="text-align:center;margin-top:70px" )
+    %img(src="http://qr.liantu.com/api.php?text=#{@url}")
+  %br
+  %br
+  %br
+  %div(class="alert1 alert-info1" )
+    %p 请扫描二维码以登录
+  %br
+  %input#code(value="#{@code}" style="display:none" )
+  %br
+  %br
+  = javascript_include_tag 'user'
+  %br
+  %br
+  %br
+  %br
+

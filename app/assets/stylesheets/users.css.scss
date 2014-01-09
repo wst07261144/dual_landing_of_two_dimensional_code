@@ -1,0 +1,26 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.back-img{
+  background-image: url(background.jpg);
+  background-color: #447d9a;
+  background-repeat: repeat-x;
+  background-position: 100% 50%;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.alert1 {
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  text-align: center;
+  width: 30%;
+  margin-left: 35%;
+  font-size: 30px;
+}
+.alert-info1 {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
