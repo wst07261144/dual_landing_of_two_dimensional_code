@@ -12,9 +12,32 @@ function code_is_used(){
         error:error_call_back
     })
     function success_call_back(result) {
-        result=='ok'? window.location.href = 'http://www.jd.com' : setTimeout('code_is_used()',2000)
+        if(result=='ok'){
+            window.location.href = 'http://192.168.1.132:3000/users/show'
+        }
+        else{
+            setTimeout('code_is_used()',2000)
+        }
     }
     function error_call_back(error) {
         alert('error')
     }
 }
+
+//function request_data(code){
+//    console.log("fsdfwafw")
+//    $.ajax({
+//        url:'/request/data/'+code ,
+//        method:'get' ,
+//        success: success_call_back,
+//        error: error_call_back
+//    })
+//    function success_call_back(result) {
+//        console.log(JSON.stringify(result))
+//    }
+//    function error_call_back(error) {
+//        alert('error')
+//    }
+//}
+
+

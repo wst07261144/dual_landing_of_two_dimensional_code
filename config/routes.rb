@@ -2,6 +2,10 @@ DualLanding::Application.routes.draw do
 
   root 'users#two_dimensional_code'
   get '/code/used/:code' => 'users#is_used'
+  get '/request/data/:code'=>'users#request_data'
+
+  get '/users/show'=>'users#show'
+  get '/logout'=>'users#logout'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

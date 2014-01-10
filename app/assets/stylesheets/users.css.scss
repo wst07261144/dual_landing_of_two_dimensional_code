@@ -1,6 +1,4 @@
-// Place all the styles related to the Users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
 .back-img{
   background-image: url(background.jpg);
   background-color: #447d9a;
@@ -23,4 +21,27 @@
   color: #31708f;
   background-color: #d9edf7;
   border-color: #bce8f1;
+}
+
+.nav-header1 {
+  display: block;
+  padding: 3px 15px;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #999999;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.right{
+  float:right;
+}
+
+.title-bar{
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
+  margin:auto;
+  width:79%;
+  background:#c0c0c0;
+  padding:1px
 }

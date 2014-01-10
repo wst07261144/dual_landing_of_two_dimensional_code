@@ -9,8 +9,16 @@ class UsersController < ApplicationController
     @url = 'http://192.168.1.132:3001/sessions/login/'+@code
   end
 
+  def show
+    data = RestClient.get('http://192.168.1.132:3001/request/data/')
+    p '-----data-->'+data
+  end
+
+  def logout
+  end
+
   def is_used
-    render :text =>  RestClient.get('localhost:3001/code/used/'+params[:code])
+    render :text =>  RestClient.get('http://192.168.1.132:3001/code/used/'+params[:code])
   end
 
 end

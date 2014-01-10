@@ -1,0 +1,34 @@
+.nav-header1.right
+  %p1
+    %lable 你好,
+    %lable
+    -#=@user.name
+  =link_to  "退出登录",:action => 'logout'
+%h2 活动通
+%div(class='title-bar container')
+  %h4
+    活动信息
+    .right
+      活动展示
+%table(class="table table-hover table-bordered" style="margin:auto; width:79%")
+  %thead
+    %tr
+      %td 编号
+      %td 活动名称
+      %td 报名人数
+      %td 竞价次数
+  %tbody
+-#    - counter = @counter
+-#    -@activities.each do |t|
+-#      %tr
+-#        %td(align="center" style="width:25%" valign="middle")
+-#          = counter
+-#          -counter=counter+1
+-#        %td(align="center" style="width:25%" valign="middle")
+-#          = t.name
+-#        %td(align="center" style="width:25%" valign="middle")
+-#
+-#        %td(align="center" style="width:25%" valign="middle")
+-#
+-#.right-padding
+-#  = will_paginate @activities ,{:previous_label =>'上一页',:next_label => '下一页'}
