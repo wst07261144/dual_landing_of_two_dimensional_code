@@ -12,8 +12,8 @@ function code_is_used(){
         error:error_call_back
     })
     function success_call_back(result) {
-        if(result=='ok'){
-            window.location.href = 'http://192.168.1.132:3000/users/show'
+        if(result!='error'){
+            window.location.href = 'http://192.168.1.6:3000/users/show/'+result
         }
         else{
             setTimeout('code_is_used()',2000)

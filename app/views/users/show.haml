@@ -2,7 +2,7 @@
   %p1
     %lable 你好,
     %lable
-    -#=@user.name
+    =@name
   =link_to  "退出登录",:action => 'logout'
 %h2 活动通
 %div(class='title-bar container')
@@ -18,17 +18,18 @@
       %td 报名人数
       %td 竞价次数
   %tbody
--#    - counter = @counter
--#    -@activities.each do |t|
--#      %tr
--#        %td(align="center" style="width:25%" valign="middle")
--#          = counter
--#          -counter=counter+1
--#        %td(align="center" style="width:25%" valign="middle")
--#          = t.name
--#        %td(align="center" style="width:25%" valign="middle")
--#
--#        %td(align="center" style="width:25%" valign="middle")
--#
+    - counter = @counter
+    -@activities.each do |t|
+      %tr
+        %td(align="center" style="width:25%" valign="middle")
+          = counter
+          -counter=counter+1
+        %td(align="center" style="width:25%" valign="middle")
+          = t['name']
+        %td(align="center" style="width:25%" valign="middle")
+          = t['activity_id'].to_i
+          =@sign_ups[t['activity_id']].length
+        %td(align="center" style="width:25%" valign="middle")
+
 -#.right-padding
 -#  = will_paginate @activities ,{:previous_label =>'上一页',:next_label => '下一页'}

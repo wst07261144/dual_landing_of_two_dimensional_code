@@ -4,7 +4,7 @@ DualLanding::Application.routes.draw do
   get '/code/used/:code' => 'users#is_used'
   get '/request/data/:code'=>'users#request_data'
 
-  get '/users/show'=>'users#show'
+  get '/users/show/:user_name'=>'users#show'
   get '/logout'=>'users#logout'
 
 
