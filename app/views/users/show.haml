@@ -18,8 +18,8 @@
       %td 报名人数
       %td 竞价次数
   %tbody
-    - counter = @counter
-    -@activities.each do |t|
+    - counter = 1
+    -@aa.each do |t|
       %tr
         %td(align="center" style="width:25%" valign="middle")
           = counter
@@ -27,9 +27,34 @@
         %td(align="center" style="width:25%" valign="middle")
           = t['name']
         %td(align="center" style="width:25%" valign="middle")
-          = t['activity_id'].to_i
-          =@sign_ups[t['activity_id']].length
+          = t['sign_up_num']
         %td(align="center" style="width:25%" valign="middle")
-
--#.right-padding
--#  = will_paginate @activities ,{:previous_label =>'上一页',:next_label => '下一页'}
+          = t['bid_num']
+%input#code_logout(value="#{@code}" style="display:none" )
+.right-padding
+  = will_paginate @aa ,{:previous_label =>'上一页',:next_label => '下一页'}
+:javascript
+  $(document).ready(function(){
+     is_logout();
+  })
+  function is_logout(){
+     var code = document.getElementById('code_logout').value
+     console.log('--------code_logout-->' + code);
+     $.ajax({
+         url:'/code/logout/'+code,
+         method:'get',
+         success:success_call_back,
+         error:error_call_back
+     })
+  }
+  function success_call_back(response){
+     console.log(response)
+     if(response == 'logout'){
+     window.location.href = 'http://192.168.1.132:3000' }
+     else {
+        setTimeout('is_logout()',2000)
+     }
+  }
+  function error_call_back(error){
+     console.log(error)
+  }

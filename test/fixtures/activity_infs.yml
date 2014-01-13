@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  avtivity_id: MyString
+  bid_num: MyString
+  sign_up_num: MyString
+
+two:
+  avtivity_id: MyString
+  bid_num: MyString
+  sign_up_num: MyString
